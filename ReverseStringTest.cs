@@ -9,11 +9,13 @@ namespace AtlasCopcoXunitTest
     {
         private IVariousMethods variousMethods = new VariousMethods();
 
-		[Fact]
-		public void ReverseString()
+		[Theory]
+		[InlineData("abc123$\"", "\"$321cba")]
+		[InlineData("a", "a")]
+		public void ReverseString(string input, string expected)
 		{
-			var actual = variousMethods.ReverseString("abc123$\"");
-			actual.Should().Be("\"$321cba");
+			var actual = variousMethods.ReverseString(input);
+			actual.Should().Be(expected);
 		}
 
 		[Theory]
