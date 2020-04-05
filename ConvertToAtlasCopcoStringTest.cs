@@ -10,7 +10,7 @@ namespace AtlasCopcoXunitTest
 		private IVariousMethods variousMethods = new VariousMethods();
 
 		[Theory]
-		[InlineData(87, "ERROR:)")]
+		[InlineData(87, "Atlas)")]
 		[InlineData(15, "AtlasCopco")]
 		[InlineData(9, "Atlas")]
 		[InlineData(20, "Copco")]
